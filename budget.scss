@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+
+.container {
+  width: 93vw;
+  margin: 0 auto;
+
+  /* Main Head */
+  &-inner__head {
+    margin: 3px auto;
+    margin-bottom: 0;
+    background: #a0a0a0;
+    text-align: center;
+    padding: {
+      top: .6rem;
+      bottom: .5px;
+    };
+    color: #fff;
+
+    .container-head {
+      /* Title */
+      &-title {
+        font-size: 21px;
+        padding-bottom: 1.5rem;
+      }
+
+      /* Total */
+      &__total {
+        #grandTotal {
+          font-size: 55px;
+          padding: 5px 0;
+        }
+      }
+
+      /* Income and Expense */
+      &-incExp {
+        padding-top: 20px;
+
+        .container {
+          &-inc,
+          &-exp {
+            width: 400px;
+            display: flex;
+            margin: 1rem auto;
+            justify-content: space-between;
+            padding: .8rem .9rem;
+            text-transform: uppercase;
+            font-size: 14px;
+
+            &__title {
+              color: black;
+              transform: translateY(5px);
+            }
+
+            &__calc {
+              font-size: 19px;
+              font-weight: 400;
+            }  
+
+            &__percent {
+              background: #ffffff46;
+              border-radius: 3px;
+              font-size: 11px;
+              padding: 5px 6px 0 6px;
+              font-weight: 400;
+              margin: 0 .3rem;
+            }         
+          }
+
+          /* Income */
+          &-inc {
+            padding-right: 3.7rem;
+            background: #28B9B5;
+          }
+
+          /* Expense */
+          &-exp {
+            background: #FF5049;
+
+            &__body {
+              display: flex;
+              
+              .container-exp__calc {
+                padding-right: .6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Inner Body */
+  &-inner__body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .9rem 0;
+    background: #f0f0f0;
+
+    div {
+      margin: 0 .6rem;
+      
+      input, 
+      select {
+        padding: .8rem 1rem;
+        font-size: 18px;
+        border: 1px solid #0000001c;
+        outline: none;
+        transition: border-color .3s ease;
+        
+        &:focus {
+          border: 1px solid #28B9B5;
+        }
+      }
+
+      ion-icon {
+        color: #28B9B5;
+        cursor: pointer;
+      }
+
+      input {        
+        border-radius: 5px;
+
+        &::placeholder {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .container-body {
+      /* Inner Body Select */
+      &__select {
+        #IncExp {
+          padding: .6rem 0;
+          width: 55px;
+
+          option {
+            padding-right: 8rem;
+            font-weight: 300;
+          }
+        }
+      }
+
+      /* Inner Body Input */
+      &__input {
+        input {
+          width: 420px;
+        }
+      }
+
+      /* Inner Body Value */
+      &__value {
+        input {
+          width: 140px;
+        }
+      }
+
+      /* Innr Body CheckIcon */
+      &__check {
+        ion-icon {
+          --ionicon-stroke-width: 16px;
+        }
+      }
+    }
+  }
+
+
+  /* Inner Display */
+  &-inner__display {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto {
+      bottom: 2rem
+    };
+    margin-top: 65px;
+    font-weight: 400;
+    width: 1100px;
+
+    .container-display {
+
+      /* Inner Display Income */
+      &__income,
+      &__expense {
+        width: 500px;
+
+        .incomeHead,
+        .expenseHead {
+          line-height: 30px;
+          font-size: 20px;
+        }
+
+        .incomeList,
+        .expenseList {
+
+          &__inner {
+            padding-top: 1rem;
+            margin: 0 .1rem;
+
+            &-each {
+              border-top: 1px solid #5e5e5e2c;
+              border-bottom: 1px solid #5e5e5e2c;
+              padding: .9rem .5rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              &:nth-child(even) {
+                background: #3a3a3a0c;
+              }
+
+              .incomeList-each,
+              .expenseList-each {
+                
+                &__head {
+                  font-size: 21px;
+                  color: #000000af;
+                }
+
+                &__body {
+                  display: flex;
+                  font-size: 20px;
+                  transform: translateY(1px);
+                  align-items: center;
+                  transition: transform .5s ease;
+
+                  div {
+                    padding: 0 .8rem;
+                  }
+
+                  &-number {
+                    transition: transform .2s ease;
+                    transform: translateX(8px);
+                  } 
+
+                  &-icon {
+                    display: none;
+                    visibility: hidden;
+                    transform: visibility .2s ease .4s;
+
+                    ion-icon {
+                      cursor: pointer;
+                      --ionicon-stroke-width: 16px;
+                      font-size: 24px;
+                    }
+                  } 
+
+                  &-perc {
+                    transition: transform .2s ease;
+                    transform: translateX(8px);
+
+                    p {
+                      font-size: 12px;
+                      background: #ff4f494b;
+                      border-radius: 3px;
+                      padding: .2rem .5rem;
+                    }
+                  } 
+                }
+              }
+
+              &:hover {
+                .incomeList-each__body-icon,
+                .expenseList-each__body-perc,
+                .expenseList-each__body-icon {
+                  display: inline-flex;
+                  visibility: visible;
+                }
+
+                .incomeList-each__body-number,
+                .expenseList-each__body-number,
+                .expenseList-each__body-perc {
+                  transform: translateX(-10px);
+                }
+              }
+            }
+          }
+        }
+
+        .incomeHead,
+        .incomeList-each__body {
+          color: #28B9B5;
+        }
+        .expenseHead,
+        .expenseList-each__body {
+          color: #FF5049;
+        }
+      }
+    }
+  }
+}
+
+
+/* Hack */
+.incomeList-each__body-perc {
+  display: none;
+}

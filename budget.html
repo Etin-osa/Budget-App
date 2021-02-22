@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget App</title>
+
+  <!-- Budget  Css -->
+  <link rel="stylesheet" href="../dist/css/budget.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="container-inner">
+
+      <!-- Main Head -->
+      <div class="container-inner__head">
+
+        <!-- Main Head Title -->
+        <div class="container-head-title">
+          <p>Availabe Budget in <span id="container-date">February 2020 </span>:</p>
+        </div>
+        <!-- End of Main Head Title -->
+
+        <!-- Main Head Total -->
+        <div class="container-head__total">
+          <p id="grandTotal">+ 7,254.00</p>
+        </div>
+        <!-- End of Main Head Total -->
+
+        <!-- Main Head Income and Expense -->
+        <div class="container-head-incExp">
+
+          <!-- Main Income -->
+          <div class="container-inc">
+            <div class="container-inc__title">
+              <p>income</p>
+            </div>
+            <div class="container-inc__calc">
+              <span>+ <span id="totalInc">25,000.00</span></span>
+            </div>
+          </div>
+          <!-- End of Main Income -->
+
+          <!-- Main Expense -->
+          <div class="container-exp">
+            <div class="container-exp__title">
+              <p>Expenses</p>
+            </div>
+            <div class="container-exp__body">
+              <div class="container-exp__calc">
+                <span>- <span id="totalExp">25,000.00</span></span>
+              </div>
+              <div class="container-exp__percent">
+                <span id="totalPercent">4%</span>
+              </div>
+            </div>
+          </div>
+          <!-- End of Main Expense -->
+
+        </div>
+        <!-- End of Main Head Income and Expense -->
+
+      </div>
+      <!-- End of Main Head -->
+
+      <!-- Main Body -->
+      <div class="container-inner__body">
+
+        <!-- Main Body Select -->
+        <div class="container-body__select">
+          <select name="IncExp" id="IncExp" class="foc">
+            <option value="+">+</option>
+            <option value="-">-</option>
+          </select>
+        </div>
+        <!-- End of Main Body Select -->
+
+        <!-- Main Body Input -->
+        <div class="container-body__input">
+          <input type="text" placeholder="Add description" id="mainAccess" class="foc">
+        </div>
+        <!-- End of Main body Input -->
+
+        <!-- Main Body Value -->
+        <div class="container-body__value">
+          <input type="number" placeholder="Value" name="numb" id="numb" class="foc">
+        </div>
+        <!-- End of Main Body Value -->
+
+        <!-- Main Body CheckIcon -->
+        <div class="container-body__check">
+          <ion-icon name="checkmark-circle-outline" size="large" id="bigIcon"></ion-icon>
+        </div>
+        <!-- End of Main Body CheckIcon -->
+
+      </div>
+      <!-- End of Main Body -->
+
+      <!-- Main Display -->
+      <div class="container-inner__display">
+
+        <!-- Main Display Income -->
+        <div class="container-display__income">
+
+          <!-- Main Display Income Head -->
+          <div class="incomeHead">
+            <span class="incomeHead__title">INCOME</span>
+          </div>
+          <!-- End of Main Display Income Head -->
+
+          <!-- Main Display Income List -->
+          <div class="incomeList">
+            <div class="incomeList__inner">
+
+              <!-- Each Income 
+              <div class="incomeList__inner-each">
+                <div class="incomeList-each__head">
+                  <p class="incomeList-name">salary</p>
+                </div>
+                <div class="incomeList-each__body">
+                  <div class="incomeList-each__body-number">
+                    <p class="incomeList-numb">+ 50,000.00</p>
+                  </div>
+                  <div class="incomeList-each__body-icon">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              End of Each Income -->
+
+            </div>
+          </div>
+          <!-- End of Main Display Income List -->
+
+        </div>
+        <!-- End of Main Display Income -->
+        
+        <!-- Main Display Expense -->
+        <div class="container-display__expense">
+
+          <!-- Main Display Expense Head -->
+          <div class="expenseHead">
+            <span class="expenseHead__title">EXPENSES</span>
+          </div>
+          <!-- End of Main Display Expense Head -->
+          
+          <!-- Main Display Expense List -->
+          <div class="expenseList">
+            <div class="expenseList__inner">              
+              
+              <!-- Main Display Expense Each List 
+              <div class="expenseList__inner-each">
+                <div class="expenseList-each__head">
+                  <p class="expenseList-name">salary</p>
+                </div>
+                <div class="expenseList-each__body">
+                  <div class="expenseList-each__body-number">
+                    <p class="expenseList-numb">- 50,000.00</p>
+                  </div>
+                  <div class="expenseList-each__body-perc">
+                    <p class="expenseList-perc">2%</p>
+                  </div>
+                  <div class="expenseList-each__body-icon">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+              End of Main Display Expense List -->
+
+            </div>
+          </div>
+          <!-- End of Main Display Expense List -->
+
+        </div>
+        <!-- Main Display Expense -->
+
+      </div>
+      <!-- End of Main Display -->
+
+    </div>
+  </div>
+
+
+
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+
+  <!-- Main js -->
+  <script src="budget.js"></script>
+</body>
+</html>
